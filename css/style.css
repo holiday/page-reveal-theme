@@ -1,0 +1,142 @@
+body, h1, h2,h3,h4 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', serif;
+}
+
+h1 {
+	font-size: 58px;
+}
+
+h2 {
+	font-size: 48px;
+}
+
+h3 {
+	font-size: 38px;
+}
+
+h4 {
+	font-size: 28px;
+}
+
+* {
+	outline: none;
+}
+
+h1,h2,h3,h4 {
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+
+i.h1 {
+	font-weight: 300;
+	font-size: 38px;
+	position: relative;
+	top: -7px;
+}
+
+.divider {
+	position: relative;
+	background-size: cover !important;
+	background-attachment: fixed !important;
+}
+
+section.page {
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	height: 780px;
+}
+
+section.page-1 h1, section.page-2 h1, section.page-3 h1, section.page-4 h1 {
+	position: absolute;
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-align: center;
+	color: #fff;
+	border: 5px solid #fff;
+	padding: 40px;
+	margin-top: 45%;
+	line-height: 80px;
+}
+
+section.page-1 {
+	background-image: url(../images/bg1.jpg);
+}
+
+section.page-3 {
+	background-color: #fff;
+}
+
+section.page-2 h1 {
+	color: #000;
+	border: 5px solid #000;
+}
+
+section.page.page-3 {
+	background-image: url(../images/bg2.jpg);	
+}
+
+section.page-4 {
+	background-color: #fed340;	
+}
+
+section.page-4 h1{
+	margin-top: 33%;
+}
+
+section.page-5 .content {
+	margin-top: 250px;
+}
+
+section.page-5 h1 {
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-align: left;
+	color: #fff;
+	padding: 40px 40px 40px 0;
+}
+
+section.page-5 .action {
+	background-color: transparent;
+	color: #fff;
+	border-color: #c0c0c0;
+	padding: 10px 20px 10px 20px;
+}
+
+section.page-5 .action:hover {
+	background-color: #fed340;
+	color: #fff;
+}
+
+section.page-5 .action:focus {
+	border:1px solid #c0c0c0;
+	outline: none;
+}
+section.page.page-5{
+	background-image: url(../images/bg3.jpg);	
+}
+
+@media (max-width: 768px) {
+
+	section.page-1 h1, section.page-2 h1, section.page-3 h1, section.page-4 h1 {
+		font-size: 28px;
+		margin-right: 15px;
+		padding: 30px;
+		line-height: 50px;
+		margin-top: 300px;
+	}
+
+	section.page-5 .content {
+		margin-top: 130px;
+	}
+
+}
