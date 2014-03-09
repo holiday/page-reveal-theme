@@ -105,7 +105,7 @@ section.page-5 h1 {
 	letter-spacing: 5px;
 	text-align: left;
 	color: #fff;
-	padding: 40px 40px 40px 0;
+	margin-bottom: 40px;
 }
 
 section.page-5 .action {
@@ -137,17 +137,18 @@ section.page.page-5{
 
 	section.page-1 h1, section.page-2 h1, section.page-3 h1, section.page-4 h1 {
 		font-size: 28px;
-		line-height: 60px;
+		line-height: 50px;
 		padding: 20px;
+		margin-top: 285px;
 	}
 
 	section.page-5 .content h1 {
 		font-size: 38px;
-		line-height: 60px;
+		line-height: 50px;
 	}
 
 	section.page-5 .content {
-		margin-top: 130px;
+		margin-top: 260px;
 	}
 
 }
