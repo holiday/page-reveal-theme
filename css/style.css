@@ -1,41 +1,6 @@
 body, h1, h2,h3,h4 {
 	margin: 0;
 	padding: 0;
-	font-family: 'Lato', serif;
-}
-
-h1 {
-	font-size: 58px;
-}
-
-h2 {
-	font-size: 48px;
-}
-
-h3 {
-	font-size: 38px;
-}
-
-h4 {
-	font-size: 28px;
-}
-
-* {
-	outline: none;
-}
-
-h1,h2,h3,h4 {
-	-webkit-user-select: none; /* Chrome/Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+ */
-}
-
-
-i.h1 {
-	font-weight: 300;
-	font-size: 38px;
-	position: relative;
-	top: -7px;
 }
 
 .divider {
@@ -56,35 +21,20 @@ section.page {
 	height: 780px;
 }
 
-section.page-1, section.page-2, section.page-3, section.page-4, section.page-5.row {
-	text-align: center;
-}
-
-section.page-1 h1, section.page-2 h1, section.page-3 h1, section.page-4 h1 {
-	padding: 40px;
-	border: 5px solid #fff;
-	letter-spacing: 5px;
-	font-weight: 400;
-	line-height: 80px;
-	margin-top: 275px;
-}
-
 section.page-1 {
 	background-image: url(../images/bg1.jpg);
 	color: #fff;
 }
 
+section.page-2 h1 {
+	color: #000;
+}
 
 section.page-3 {
 	background-color: #fff;
 }
 
-section.page-2 h1 {
-	color: #000;
-	border: 5px solid #000;
-}
-
-section.page.page-3 {
+section.page-3 {
 	background-image: url(../images/bg2.jpg);	
 }
 
@@ -96,59 +46,6 @@ section.page-4 {
 	background-color: #fed340;	
 }
 
-section.page-5 .content {
-	margin-top: 250px;
-}
-
-section.page-5 h1 {
-	font-weight: 700;
-	letter-spacing: 5px;
-	text-align: left;
-	color: #fff;
-	margin-bottom: 40px;
-}
-
-section.page-5 .action {
-	background-color: transparent;
-	color: #fff;
-	border-color: #c0c0c0;
-	padding: 10px 20px 10px 20px;
-}
-
-section.page-5 .action:hover {
-	background-color: #fed340;
-	color: #fff;
-}
-
-section.page-5 .action:focus {
-	border:1px solid #c0c0c0;
-	outline: none;
-}
 section.page.page-5{
 	background-image: url(../images/bg3.jpg);	
-}
-
-@media (max-width: 768px) {
-
-	i.h1 {
-		font-size: 18px;
-		top: -3px;
-	}
-
-	section.page-1 h1, section.page-2 h1, section.page-3 h1, section.page-4 h1 {
-		font-size: 28px;
-		line-height: 50px;
-		padding: 20px;
-		margin-top: 285px;
-	}
-
-	section.page-5 .content h1 {
-		font-size: 38px;
-		line-height: 50px;
-	}
-
-	section.page-5 .content {
-		margin-top: 260px;
-	}
-
 }
