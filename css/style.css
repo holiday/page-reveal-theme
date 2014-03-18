@@ -9,6 +9,10 @@ body, h1, h2,h3,h4 {
 	background-attachment: fixed !important;
 }
 
+section.page-reveal {
+	height: 780px;
+}
+
 section.page {
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -18,5 +22,4 @@ section.page {
 	padding: 0;
 	margin: 0;
 	position: relative;
-	height: 780px;
 }
