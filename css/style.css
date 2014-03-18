@@ -4,10 +4,6 @@
 	background-attachment: fixed;
 }
 
-section.page-reveal {
-	height: 780px;
-}
-
 section.page {
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
