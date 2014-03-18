@@ -1,12 +1,7 @@
-body, h1, h2,h3,h4 {
-	margin: 0;
-	padding: 0;
-}
-
 .divider {
 	position: relative;
-	background-size: cover !important;
-	background-attachment: fixed !important;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 section.page-reveal {
