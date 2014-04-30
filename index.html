@@ -1,31 +1,49 @@
-<html>
+<!DOCTYPE html>
 <head>
 	<title>Page Background Reveal Theme</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/responsive-pullout-menu.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	
 	<style type="text/css">
-		body, h1, h2,h3,h4 {
+		body, h1, h2,h3,h4,ul,li {
 			margin: 0;
 			padding: 0;
 		}
-		
-		section.page-reveal {
-			height: 780px;
+
+		section {
+			height: 100%;
+		}
+
+		ul li{
+			list-style-type: none;
+			overflow: hidden;
+			height: 700px;
+		}
+
+		.divider {
+			position: relative;
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+			z-index: -1;
+			height: 900px;
 		}
 		
 		section.page-1 {
 			background-image: url(../images/bg1.jpg);
 			color: #fff;
+		}
+
+		section.page-2, section.page-4 {
+			background-color: #fff;
+			z-index: 1;
 		}
 
 		section.page-2 h1 {
@@ -53,62 +71,195 @@
 		}
 
 	</style>
-
 </head>
 
 <body>
 
-	<section class="page-reveal page page-1 divider">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<h1>WE KNOW NO LIMITS</h1>	
-				</div>
-			</div>
-		</div>
-	</section>
+	<ul class="parallax">
 
-	<section class="page-reveal page page-2">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<h1>DRIVEN <i class="h1">to</i> <br> PERFECTION</h1>	
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="page-reveal page page-3 divider">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<h1>FUELED <i class="h1">by</i> INNOVATION</h1>	
-				</div>
-				
-			</div>
-		</div>
-	</section>
-
-	<section class="page-reveal page page-4">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<h1>DREAM IT <i class="h1">&</i> WE WILL BUILD IT</h1>	
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="page-reveal page page-5 divider">
-		<div class="container">
-			<div class="content">
-				<div class="row">
-					<div class="col-sm-6">
-						<h1>LETS BUILD <i class="h1">your</i> NEXT BIG IDEA</h1>	
+		<li class="first">
+			<section class="page-1 divider">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-10 col-sm-offset-1">
+							<h1>WE KNOW NO LIMITS</h1>	
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
+			</section>
+		</li>
+		<li>
+			<section class="page-2">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-10 col-sm-offset-1">
+							<h1>DRIVEN <i class="h1">to</i> <br> PERFECTION</h1>	
+						</div>
+					</div>
+				</div>
+			</section>
+		</li>
+		<li>
+			<section class="page-3 divider">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-10 col-sm-offset-1">
+							<h1>FUELED <i class="h1">by</i> INNOVATION</h1>	
+						</div>
+						
+					</div>
+				</div>
+			</section>
+		</li>
+		<li>
+			<section class="page-4">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-10 col-sm-offset-1">
+							<h1>DREAM IT <i class="h1">&</i> WE WILL BUILD IT</h1>	
+						</div>
+					</div>
+				</div>
+			</section>
+		</li>
+		<li>
+			<section class="page-5 divider">
+				<div class="container">
+					<div class="content">
+						<div class="row">
+							<div class="col-sm-6">
+								<h1>LETS BUILD <i class="h1">your</i> NEXT BIG IDEA</h1>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</li>
+
+	</ul>
+	
+
+	
+
+	<script type="text/javascript">
+
+		(function($){
+
+			var $parallax_sections = $("ul li section.divider");
+
+			var i, len, div, offset, offsets, scroll, top, transform;
+
+			len = $parallax_sections.length;
+
+			var offsets = $parallax_sections.get().map(function(div,d) {
+				return $(div).offset();
+			});
+
+			//needed to fix choppy parallax
+			window.addEventListener("mousewheel", mouseScroll, false);
+
+			function mouseScroll(e) {
+			         
+			    // cancel the default scroll behavior
+			    if (e.preventDefault) {
+			        e.preventDefault();
+			    }
+			     
+			    // deal with different browsers calculating the delta differently
+			    if (e.wheelDelta) {
+			        mouseDelta = e.wheelDelta / 120;
+			    } else if (e.detail) {
+			        mouseDelta = -e.detail / 3;
+			    }
+
+			    var y = $(window).scrollTop();  //your current y position on the page
+			    $(window).scrollTop(y+e.deltaY);
+
+			    console.log(e.deltaY);
+			}
+
+
+			var render = function() {
+
+				top = $(window).scrollTop();
+
+				for(i=0; i < len; i++) {
+
+					div = $parallax_sections[i];
+
+					offset = top - offsets[i].top;
+
+					scroll = ~~((offset / 600) * 300);
+
+					if(scroll % 2){
+						transform = 'translate3d(0px, ' + (scroll + 1) + 'px, 0px)';
+					}else{
+						transform = 'translate3d(0px, ' + scroll + 'px, 0px)';
+					}
+
+					div.style.webkitTransform = transform;
+					div.style.MozTransform = transform
+					div.style.msTransform = transform;
+					div.style.OTransform = transform;
+					div.style.transform = transform;
+
+					/*
+					div = $parallax_sections[i];
+
+					offset = $(div).offset().top;
+
+					scroll = ~~(((top - offset) / 600) * 300);
+
+					if(scroll % 2){
+						transform = 'translate3d(0px, ' + (scroll + 1) + 'px, 0px)';
+					}else{
+						transform = 'translate3d(0px, ' + scroll + 'px, 0px)';
+					}
+
+					div.style.webkitTransform = transform;
+					div.style.MozTransform = transform
+					div.style.msTransform = transform;
+					div.style.OTransform = transform;
+					div.style.transform = transform;
+					*/
+				}
+			};
+
+			(function loop() {
+				requestAnimationFrame(loop);
+				render();
+			})();
+			
+
+			(function() {
+			    var lastTime = 0;
+			    var vendors = ['webkit', 'moz'];
+			    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+			        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+			        window.cancelAnimationFrame =
+			          window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+			    }
+
+			    if (!window.requestAnimationFrame)
+			        window.requestAnimationFrame = function(callback, element) {
+			            var currTime = new Date().getTime();
+			            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+			            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+			              timeToCall);
+			            lastTime = currTime + timeToCall;
+			            return id;
+			        };
+
+			    if (!window.cancelAnimationFrame)
+			        window.cancelAnimationFrame = function(id) {
+			            clearTimeout(id);
+			        };
+			}());
+
+		})(jQuery);
+
+
+
+	</script>
 </body>
 </html>
