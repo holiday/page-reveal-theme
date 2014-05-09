@@ -1,15 +1,28 @@
-.divider {
-	background-size: cover;
-	
+/* Parallax Styles */
+ul li{
+	list-style-type: none;
+	overflow: hidden;
+	height: 700px;
 }
 
-section.page {
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	padding: 0;
-	margin: 0;
-	position: relative;
+ul li div {
+	z-index: 1;
 }
+
+.absolute {
+	z-index: 2;
+	left: 15px;
+	right: 15px;
+	position: absolute;
+}
+
+.parallax {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: -1 !important;
+	height: 900px;
+}
+/* End Parallax Styles */
+		

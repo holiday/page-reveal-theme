@@ -4,7 +4,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<!-- Latest compiled and minified JavaScript -->
@@ -12,61 +11,24 @@
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	
 	<style type="text/css">
-		body, h1, h2,h3,h4,ul,li {
+		body,h1, h2,h3,h4,ul,li {
 			margin: 0;
 			padding: 0;
 		}
-
-		section {
+		
+		.first {
 			height: 100%;
 		}
 
-		ul li{
-			list-style-type: none;
-			overflow: hidden;
-			height: 700px;
-		}
-
-		.divider {
-			position: relative;
-			background-repeat: no-repeat;
-			background-size: cover;
-			
-			z-index: -1;
-			height: 900px;
-		}
-		
-		section.page-1 {
+		.page-1 {
 			background-image: url(../images/bg1.jpg);
-			color: #fff;
 		}
 
-		section.page-2, section.page-4 {
-			background-color: #fff;
-			z-index: 1;
-		}
-
-		section.page-2 h1 {
-			color: #000;
-		}
-
-		section.page-3 {
-			background-color: #fff;
-		}
-
-		section.page-3 {
+		.page-3 {
 			background-image: url(../images/bg2.jpg);	
 		}
 
-		section.page-3 h1, section.page-4 h1{
-			color: #fff;
-		}
-
-		section.page-4 {
-			background-color: #fed340;	
-		}
-
-		section.page-5{
+		.page-5{
 			background-image: url(../images/bg3.jpg);	
 		}
 
@@ -75,191 +37,53 @@
 
 <body>
 
-	<ul class="parallax">
-
+	<ul>
 		<li class="first">
-			<section class="page-1 divider">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
-							<h1>WE KNOW NO LIMITS</h1>	
-						</div>
-					</div>
+			<div class="container absolute">
+				<div class="row">
+					<h1>Page 1</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
 				</div>
-			</section>
+			</div>
+			<div class="page-1 parallax"></div>
 		</li>
 		<li>
-			<section class="page-2">
+			<div class="page-2">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
-							<h1>DRIVEN <i class="h1">to</i> <br> PERFECTION</h1>	
-						</div>
+						<h1>Page 2</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
 					</div>
 				</div>
-			</section>
+			</div>
 		</li>
 		<li>
-			<section class="page-3 divider">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
-							<h1>FUELED <i class="h1">by</i> INNOVATION</h1>	
-						</div>
-						
-					</div>
-				</div>
-			</section>
+			<div class="page-3 parallax"></div>
 		</li>
 		<li>
-			<section class="page-4">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-1">
-							<h1>DREAM IT <i class="h1">&</i> WE WILL BUILD IT</h1>	
-						</div>
-					</div>
-				</div>
-			</section>
+			<div class="page-4">
+			</div>
 		</li>
 		<li>
-			<section class="page-5 divider">
-				<div class="container">
-					<div class="content">
-						<div class="row">
-							<div class="col-sm-6">
-								<h1>LETS BUILD <i class="h1">your</i> NEXT BIG IDEA</h1>	
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			<div class="page-5 parallax"></div>
+		</li>
+		<li>
+			<div class="page-6">
+			</div>
 		</li>
 
 	</ul>
 	
 
-	
-
+	<script type="text/javascript" src="js/parallax.js"></script>
 	<script type="text/javascript">
 
-		(function($){
+		$( window ).resize(function() {
+		  $( "ul li.first" ).height($(window).height());
+		});
 
-			var $parallax_sections = $("ul li section.divider");
-
-			var i, len, div, offset, offsets, scroll, top, transform;
-
-			len = $parallax_sections.length;
-
-			var offsets = $parallax_sections.get().map(function(div,d) {
-				return $(div).offset();
-			});
-
-			//needed to fix choppy parallax
-			window.addEventListener("mousewheel", mouseScroll, false);
-
-			function mouseScroll(e) {
-			         
-			    // cancel the default scroll behavior
-			    if (e.preventDefault) {
-			        e.preventDefault();
-			    }
-			     
-			    // deal with different browsers calculating the delta differently
-			    if (e.wheelDelta) {
-			        mouseDelta = e.wheelDelta / 120;
-			    } else if (e.detail) {
-			        mouseDelta = -e.detail / 3;
-			    }
-
-			    var y = $(window).scrollTop();  //your current y position on the page
-			    $(window).scrollTop(y+e.deltaY);
-
-			    console.log(e.deltaY);
-			}
-
-
-			var render = function() {
-
-				top = $(window).scrollTop();
-
-				for(i=0; i < len; i++) {
-
-					div = $parallax_sections[i];
-
-					offset = top - offsets[i].top;
-
-					scroll = ~~((offset / 600) * 300);
-
-					if(scroll % 2){
-						transform = 'translate3d(0px, ' + (scroll + 1) + 'px, 0px)';
-					}else{
-						transform = 'translate3d(0px, ' + scroll + 'px, 0px)';
-					}
-
-					div.style.webkitTransform = transform;
-					div.style.MozTransform = transform
-					div.style.msTransform = transform;
-					div.style.OTransform = transform;
-					div.style.transform = transform;
-
-					/*
-					div = $parallax_sections[i];
-
-					offset = $(div).offset().top;
-
-					scroll = ~~(((top - offset) / 600) * 300);
-
-					if(scroll % 2){
-						transform = 'translate3d(0px, ' + (scroll + 1) + 'px, 0px)';
-					}else{
-						transform = 'translate3d(0px, ' + scroll + 'px, 0px)';
-					}
-
-					div.style.webkitTransform = transform;
-					div.style.MozTransform = transform
-					div.style.msTransform = transform;
-					div.style.OTransform = transform;
-					div.style.transform = transform;
-					*/
-				}
-			};
-
-			(function loop() {
-				requestAnimationFrame(loop);
-				render();
-			})();
-			
-
-			(function() {
-			    var lastTime = 0;
-			    var vendors = ['webkit', 'moz'];
-			    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-			        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-			        window.cancelAnimationFrame =
-			          window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
-			    }
-
-			    if (!window.requestAnimationFrame)
-			        window.requestAnimationFrame = function(callback, element) {
-			            var currTime = new Date().getTime();
-			            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-			            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
-			              timeToCall);
-			            lastTime = currTime + timeToCall;
-			            return id;
-			        };
-
-			    if (!window.cancelAnimationFrame)
-			        window.cancelAnimationFrame = function(id) {
-			            clearTimeout(id);
-			        };
-			}());
-
-		})(jQuery);
-
-
-
+		var plx = new Parallax('ul li div.parallax');
+		plx.start();
 	</script>
 </body>
 </html>
