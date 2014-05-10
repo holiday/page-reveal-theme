@@ -15,9 +15,10 @@
 		body,h1, h2,h3,h4,ul,li {
 			margin: 0;
 			padding: 0;
+			text-align: center;
 		}
 
-		.first {
+		.page-1 {
 			height: 100%;
 		}
 
@@ -25,16 +26,20 @@
 			color: white;
 		}
 
-		.page-1 {
+		.page-1 div.parallax {
 			background-image: url(../images/bg1.jpg);
 		}
 
-		.page-3 {
+		.page-3 div.parallax{
 			background-image: url(../images/bg2.jpg);	
 		}
 
-		.page-5{
+		.page-5 div.parallax{
 			background-image: url(../images/bg3.jpg);	
+		}
+
+		.page-2, .page-4 {
+			height: 600px;
 		}
 		/* Non-Important styles */
 
@@ -44,26 +49,24 @@
 <body>
 
 	<ul>
-		<li class="first">
+		<li class="page-1">
 			<div class="container absolute">
 				<div class="row">
 					<h1>Page 1</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
 				</div>
 			</div>
-			<div class="page-1 parallax"></div>
+			<div class="parallax"></div>
 		</li>
-		<li>
-			<div class="page-2">
-				<div class="container">
-					<div class="row">
-						<h1>Page 2</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
-					</div>
+		<li class="page-2">
+			<div class="container">
+				<div class="row">
+					<h1>Page 2</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
 				</div>
 			</div>
 		</li>
-		<li>
+		<li class="page-3">
 			<div class="container absolute">
 				<div class="row">
 					<h1>Page 3</h1>
@@ -72,36 +75,31 @@
 			</div>
 			<div class="page-3 parallax"></div>
 		</li>
-		<li>
-			<div class="page-4">
-				<div class="container">
-					<div class="row">
-						<h1>Page 4</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
-					</div>
+		<li class="page-4">
+			<div class="container">
+				<div class="row">
+					<h1>Page 4</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
 				</div>
 			</div>
 		</li>
-		<li>
+		<li class="page-5">
 			<div class="container absolute">
 				<div class="row">
 					<h1>Page 5</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
 				</div>
 			</div>
-			<div class="page-5 parallax"></div>
+			<div class="parallax"></div>
 		</li>
-		<li>
-			<div class="page-6">
-				<div class="container">
-					<div class="row">
-						<h1>Page 6</h1>
-						<p>Loresm ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
-					</div>
+		<li class="page-6">
+			<div class="container">
+				<div class="row">
+					<h1>Page 6</h1>
+					<p>Loresm ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ornare odio. Mauris congue, dolor non porta commodo, lectus augue semper lorem, nec posuere arcu ante non tellus. Mauris accumsan iaculis odio, in laoreet metus faucibus eu. Morbi molestie, neque id vulputate mollis, enim diam tempus tortor, ut aliquam justo quam quis lectus. Cras ut est et lorem adipiscing vestibulum. Cras eu ultricies neque, sed cursus odio. Proin vitae molestie odio. Nam suscipit, purus sit amet imperdiet cursus, velit purus eleifend lacus, in tristique massa enim eu quam. Ut vitae lectus tincidunt, suscipit leo sit amet, lacinia risus. Quisque et magna non nisl luctus congue facilisis ut nisl. Curabitur sed lectus quis nunc ornare iaculis.</p>
 				</div>
 			</div>
 		</li>
-
 	</ul>
 	
 
@@ -112,7 +110,7 @@
 		  $( "ul li.first" ).height($(window).height());
 		});
 
-		var plx = new Parallax('ul li div.parallax');
+		var plx = new Parallax('ul li div.parallax', 700, 200);
 		plx.start();
 	</script>
 </body>

@@ -20,9 +20,10 @@ ul li div {
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: center top;
 	z-index: -1 !important;
 	height: 900px;
+
 }
 /* End Parallax Styles */
 		
