@@ -1,12 +1,8 @@
 /* Parallax Styles */
-ul li{
+ul.parallax-slides li{
 	list-style-type: none;
 	overflow: hidden;
 	height: 700px;
-}
-
-ul li div {
-	z-index: 1;
 }
 
 .absolute {
