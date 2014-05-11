@@ -21,7 +21,6 @@ ul li div {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;
-	z-index: -1 !important;
 	height: 900px;
 
 }
