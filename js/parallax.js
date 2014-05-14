@@ -77,8 +77,6 @@ var Parallax = (function($){
 					self.div.style.OTransform = self.transform;
 					self.div.style.transform = self.transform;
 				}
-
-				
 			}
 		};
 
