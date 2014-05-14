@@ -6,12 +6,17 @@
 
 var Parallax = (function($){
 
-	function Parallax(el, window_height, overhang) {
+	function Parallax(el, overhang) {
+		var self = this;
 		this.el = el;
-		this.sections = $(el);
+		this.sections = $(el).find('.parallax');
+		this.list = $(el).find('li');
+		this.heights;
+		this.overhangs;
 		this.top = $(window).scrollTop();
 		this.len = this.sections.length;
 		this.i = 0;
+		this.j = 0;
 		this.y;
 		this.div;
 		this.offset;
@@ -19,16 +24,27 @@ var Parallax = (function($){
 		this.scroll;
 		this.transform;
 		this.distance_scrolled; //window height + scrollTop
-		this.window_height = window_height;
-		this.overhang = overhang;
 
 		//compute offsets of each section from top using a mapping function
-		this.offsets = this.sections.get().map(function(div,j) {
-			return $(div).offset();
+		this.offsets = this.sections.get().map(function(div) {
+			return ~~$(div).parent().offset().top;
+		});
+
+		//get the heights of all the slides
+		this.heights = this.list.get().map(function(div) {
+			return ~~$(div).height();
+		});
+
+		this.overhangs = this.sections.get().map(function(div) {
+			return ~~($(div).height() - $(div).parent().height());
 		});
 
 		//listen for scroll events so we prevent choppy scrolling
 		window.addEventListener("mousewheel", Parallax.prototype.mouseScroll, false);
+
+		window.addEventListener("resize", function(){
+			Parallax.prototype.windowResize(self);
+		});
 	}
 
 	/**
@@ -51,6 +67,22 @@ var Parallax = (function($){
 	    $(window).scrollTop(self.y + evt.deltaY);
 	}
 
+	Parallax.prototype.windowResize = function(self) {
+		//compute offsets of each section from top using a mapping function
+		self.offsets = self.sections.get().map(function(div) {
+			return ~~$(div).parent().offset().top;
+		});
+
+		//update slide heights 
+		self.heights = self.list.get().map(function(div) {
+			return ~~$(div).height();
+		});
+
+		self.overhangs = self.sections.get().map(function(div) {
+			return ~~($(div).height() - $(div).parent().height());
+		});
+	};
+
 	Parallax.prototype.start = function() {
 		var self = this;
 
@@ -59,15 +91,15 @@ var Parallax = (function($){
 			self.top = $(window).scrollTop();
 			self.distance_scrolled = self.top + $(window).height();
 
-			for(self.i = 0; self.i < self.len; self.i++) {
+			for(self.i=0, self.j=0; self.i < self.len; self.i++, self.j+=2) {
 
 				//check if the slide is visible, only then we should parallax
-				if(self.distance_scrolled > self.offsets[self.i].top && self.distance_scrolled < (self.offsets[self.i].top + $(window).height() + self.window_height)) {
+				if(self.distance_scrolled > self.offsets[self.i] && self.distance_scrolled < (self.offsets[self.i] + $(window).height() + self.heights[self.j])) {
 					self.div = self.sections[self.i];
 
-					self.offset = self.top - self.offsets[self.i].top;
+					self.offset = self.top - self.offsets[self.i];
 
-					self.scroll = ~~((self.offset / self.window_height) * self.overhang);
+					self.scroll = ~~((self.offset / self.heights[self.j]) * self.overhangs[self.i]);
 
 					self.transform = 'translate3d(0px, ' + self.scroll + 'px, 0px)';
 
